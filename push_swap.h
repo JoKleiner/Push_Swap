@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 11:19:34 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/29 16:11:23 by joklein          ###   ########.fr       */
+/*   Updated: 2025/01/29 19:22:01 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
-# include <stdio.h>
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -25,7 +25,7 @@ int					arg_to_alst(t_list **a_one, int argc, char **argv);
 void				sorting(t_list **a_one, t_list **b_one);
 void				rotate_a_end(t_list **a_one);
 
-// push in a sort
+// push in stack a sort
 void				calc_low_push_a(t_list **a_one, t_list **b_one);
 int					cost_temp(t_list *a_one, t_list *b_one, t_list *temp_b,
 						int num);
@@ -51,11 +51,11 @@ t_list				*find_low_push(t_list **pos_one);
 int					is_sort(t_list **a_one);
 
 // operations
+void				push(t_list **pos_one_in, t_list **pos_one_out, int i);
 void				rotate(t_list **pos_one, int i);
 void				both_rotate(t_list **a_one, t_list **b_one);
 void				re_rotate(t_list **pos_one, int i);
 void				re_both_rotate(t_list **a_one, t_list **b_one);
-void				push(t_list **pos_one_in, t_list **pos_one_out, int i);
 void				swap(t_list **pos_one, int i);
 void				both_swap(t_list **a_one, t_list **b_one);
 

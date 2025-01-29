@@ -22,7 +22,7 @@ all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJS)
 	@printf "Objects $(NAME)... \033[0;32mcreated\033[0m\n"
-	@$(CC) $(CC_FLAGS) -o $(NAME) $(LIBFT) $(OBJS)
+	@$(CC) $(CC_FLAGS) -o $(NAME) $(OBJS) $(LIBFT) 
 	@printf "\033[0;32m$(NAME) successfully built!\033[0m\n"
 
 $(LIBFT):
