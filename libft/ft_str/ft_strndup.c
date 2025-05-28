@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:15:07 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:24:24 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:47:44 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Duplicates n characters of a string in a newly allocated memory block.
 char	*ft_strndup(const char *str, size_t len)
 {
 	char	*dst;

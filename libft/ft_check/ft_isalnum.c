@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 18:15:07 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:47 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/07 18:20:28 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:49:40 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isdigit(int num)
+//Checks if a character is alphanumeric (letter or digit).
+int	ft_isalnum(int cha)
 {
-	if (num >= '0' && num <= '9')
+	if ((cha >= 'A' && cha <= 'Z')
+		|| (cha >= 'a' && cha <= 'z')
+		|| (cha >= '0' && cha <= '9'))
 		return (1);
 	return (0);
 }

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:50:33 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:27:03 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:40:18 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Copies memory with overlapping areas handled safely.
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t		i;

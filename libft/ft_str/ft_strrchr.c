@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:34:33 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:28:00 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:48:06 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Finds the last character in a string.
 char	*ft_strrchr(const char *src, int find)
 {
 	size_t	len;

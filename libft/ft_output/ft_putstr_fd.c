@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 18:20:28 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:45 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/21 13:33:48 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:49:16 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isalnum(int cha)
+//Writes a string.
+long	ft_putstr_fd(char *str, int fd)
 {
-	if ((cha >= 'A' && cha <= 'Z')
-		|| (cha >= 'a' && cha <= 'z')
-		|| (cha >= '0' && cha <= '9'))
-		return (1);
-	return (0);
+	size_t	strlen;
+
+	if (str == NULL)
+	{
+		if (write(fd, "(null)", 6) == -1)
+			return (-1);
+		return (6);
+	}
+	strlen = ft_strlen((const char *)str);
+	if (write(fd, str, strlen) == -1)
+		return (-1);
+	return (strlen);
 }

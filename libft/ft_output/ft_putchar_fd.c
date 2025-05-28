@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:57:49 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:46 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/15 17:09:05 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:48:46 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include <unistd.h>
 
-int	ft_isalpha(int cha)
+//Writes a single character.
+void	ft_putchar_fd(char cha, int fd)
 {
-	if ((cha >= 'A' && cha <= 'Z') || (cha >= 'a' && cha <= 'z'))
-		return (1);
-	return (0);
+	write(fd, &cha, 1);
 }

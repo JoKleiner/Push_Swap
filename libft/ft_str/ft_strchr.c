@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 16:51:21 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:49 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/08 12:08:41 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:45:51 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_striteri(char *str, void (*f)(unsigned int, char *))
+//Finds the first character in a string.
+char	*ft_strchr(const char *str, int cha)
 {
-	unsigned int	i;
+	size_t	i;
 
+	if ((unsigned char)cha == '\0')
+		return ( (char *) &str [ft_strlen(str)]       );
 	i = 0;
 	while (str[i] != '\0')
 	{
-		f(i, (void *)&str[i]);
+		if (str[i] == (unsigned char)cha)
+			return ((char *)&str[i]);
 		i++;
 	}
+	return (NULL);
 }

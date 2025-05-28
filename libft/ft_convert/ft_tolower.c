@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 18:35:46 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:47 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/10 13:41:11 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:45:20 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isprint(int cha)
+//Converts an uppercase letter to lowercase.
+int	ft_tolower(int cha)
 {
-	if (cha >= 32 && cha <= 126)
-		return (1);
-	return (0);
+	if (cha >= 'A' && cha <= 'Z')
+		cha = cha + 32;
+	return (cha);
 }

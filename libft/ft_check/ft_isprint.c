@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 17:31:04 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 17:42:20 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/07 18:35:46 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:50:07 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putendl(char *str)
+//Checks if a character is printable, including space.
+int	ft_isprint(int cha)
 {
-	write(1, str, ft_strlen((const char *)str));
-	write(1, "\n", 1);
+	if (cha >= 32 && cha <= 126)
+		return (1);
+	return (0);
 }

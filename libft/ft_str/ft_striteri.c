@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 17:09:05 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:38:59 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/15 16:51:21 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:46:21 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putchar(char cha)
+//Applies a function to each character of a string, modifying it in place.
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
-	return (write(1, &cha, 1));
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		f(i, (void *)&str[i]);
+		i++;
+	}
 }

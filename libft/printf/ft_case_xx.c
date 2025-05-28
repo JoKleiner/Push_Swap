@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_xx.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:41:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/23 11:00:08 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 14:23:40 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	case_xx(unsigned int numunsign, char cha)
 		return (1);
 	}
 	num_ret = hex_for_xx(numunsign, buffer, cha);
-	if (ft_putstr_rev(buffer) == -1)
+	if (ft_putstr_rev_fd(buffer, 1) == -1)
 		return (-1);
 	return (num_ret);
 }

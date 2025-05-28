@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 18:28:34 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/28 12:39:57 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/09 10:57:58 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:47:57 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-//Copies a memory block to another location.
-void	*ft_memcpy(void *dst, const void *src, size_t num)
+//Locates a substring within a string.
+char	*ft_strnstr(const char *src, const char *search, size_t len)
 {
-	size_t		i;
+	size_t	i;
+	size_t	u;
 
-	if (dst == 0 && src == 0)
-		return (NULL);
 	i = 0;
-	while (i < num)
+	if (*search == '\0')
+		return ((char *)src);
+	while (src[i] != '\0' && i < len)
 	{
-		((unsigned char *) dst)[i] = ((unsigned char *) src)[i];
+		u = 0;
+		while ((src[i + u] == search[u]) && ((i + u) < len))
+		{
+			if (search[u + 1] == '\0')
+				return ((char *)&src[i]);
+			u++;
+		}
 		i++;
 	}
-	return (dst);
+	return (0);
 }

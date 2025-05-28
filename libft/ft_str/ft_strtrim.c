@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:20:17 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:28:03 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:48:16 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ size_t	ft_trim2(char const *str, char const *set, size_t trim1)
 	return (trim2);
 }
 
+//Trims characters from the beginning and end of a string.
 char	*ft_strtrim(char const *str, char const *set)
 {
 	char	*dst;

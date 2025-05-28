@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:43:25 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:45 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:45:12 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	mem_fill(char **ptr, long num, int i)
 	return (1);
 }
 
+//Converts an integer to a string.
 char	*ft_itoa(int num)
 {
 	char	*ptr;

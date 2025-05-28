@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:50:25 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 16:13:54 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 14:20:41 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int	percent_found(va_list arg_list, char cha)
 
 	num_ret = 0;
 	if (cha == 'c')
-		num_ret = ft_putchar((char)va_arg(arg_list, int));
+		num_ret = ft_putchar_fd((char)va_arg(arg_list, int), 1);
 	if (cha == 's')
-		num_ret = ft_putstr((char *)va_arg(arg_list, char *));
+		num_ret = ft_putstr_fd((char *)va_arg(arg_list, char *), 1);
 	if (cha == 'd' || cha == 'i')
-		num_ret = ft_putnbr((int)va_arg(arg_list, int));
+		num_ret = ft_putnbr_fd((int)va_arg(arg_list, int), 1);
 	if (cha == 'p')
 		num_ret = case_p((size_t)va_arg(arg_list, size_t));
 	if (cha == 'u')

@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 13:41:11 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:28:10 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/15 17:31:04 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:48:53 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <unistd.h>
 
-int	ft_tolower(int cha)
+//Writes a string followed by a newline.
+void	ft_putendl_fd(char *str, int fd)
 {
-	if (cha >= 'A' && cha <= 'Z')
-		cha = cha + 32;
-	return (cha);
+	write(fd, str, ft_strlen((const char *)str));
+	write(fd, "\n", 1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:58:22 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/29 15:06:18 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:45:40 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void	word_cpy(char const *str, char cha, char **wordptr)
 	wordptr[j] = NULL;
 }
 
+//Splits a string into substrings using a delimiter.
 char	**ft_split(char const *str, char cha)
 {
 	size_t	word_num;

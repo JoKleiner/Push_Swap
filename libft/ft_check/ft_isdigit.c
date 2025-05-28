@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:08:41 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:49 by joklein          ###   ########.fr       */
+/*   Created: 2024/10/07 18:15:07 by joklein           #+#    #+#             */
+/*   Updated: 2025/05/28 12:50:01 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strchr(const char *str, int cha)
+//Checks if a character is a decimal digit.
+int	ft_isdigit(int num)
 {
-	size_t	i;
-
-	if ((unsigned char)cha == '\0')
-		return ( (char *) &str [ft_strlen(str)]       );
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == (unsigned char)cha)
-			return ((char *)&str[i]);
-		i++;
-	}
-	return (NULL);
+	if (num >= '0' && num <= '9')
+		return (1);
+	return (0);
 }

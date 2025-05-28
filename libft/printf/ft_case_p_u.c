@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_p_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:38:29 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 16:13:43 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 14:24:41 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	case_p(size_t num)
 	size_t	u;
 
 	u = 0;
-	num_ret = ft_putstr("0x");
+	num_ret = ft_putstr_fd("0x", 1);
 	if (num_ret == -1)
 		return (-1);
 	if (num == 0)
@@ -34,7 +34,7 @@ int	case_p(size_t num)
 		}
 	}
 	buffer[u] = '\0';
-	temp = ft_putstr_rev(buffer);
+	temp = ft_putstr_rev_fd(buffer, 1);
 	if (temp == -1)
 		return (-1);
 	num_ret = num_ret + temp;
@@ -50,7 +50,7 @@ int	case_u(unsigned int numunsign)
 		num_ret = case_u(numunsign / 10);
 	if (num_ret == -1)
 		return (-1);
-	if (ft_putchar(numunsign % 10 + '0') == -1)
+	if (ft_putchar_fd(numunsign % 10 + '0', 1) == -1)
 		return (-1);
 	return (num_ret + 1);
 }

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:37:41 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:27:05 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:46:08 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Duplicates a string in a newly allocated memory block.
 char	*ft_strdup(const char *str)
 {
 	char	*dst;

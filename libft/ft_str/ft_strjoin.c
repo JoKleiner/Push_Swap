@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 10:58:03 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:27:05 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:46:42 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Concatenates two strings into a new string.
 char	*ft_strjoin(char const *str1, char const *str2)
 {
 	char	*dst;

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:02:43 by joklein           #+#    #+#             */
-/*   Updated: 2025/01/22 15:26:50 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/28 12:46:53 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+//Concatenates two strings with size limit for the destination.
 size_t	ft_strlcat(char *dst, const char *src, size_t len)
 {
 	size_t	dstlen;
