@@ -33,6 +33,6 @@ Clean and leak-free C code
 
     ./push_swap 3 2 1
 
-Output:<br/>
+**Output:**<br/>
 sa<br/>
 rra<br/>
