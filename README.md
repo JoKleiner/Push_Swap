@@ -14,12 +14,14 @@ Only a few operations are allowed:
 - rra, rrb, rrr – reverse rotate (bottom to top)
 
 **Features:**<br/>
-Handles input errors and duplicates
-Sorts stacks of different sizes (from 3 up to 500 elements)
-Uses different strategies depending on stack size:
-Hardcoded solutions for very small stacks
-Optimized radix or chunk-based sorting for larger stacks
-Clean and leak-free C code
+Handles input errors and duplicates<br/>
+Sorts stacks of different sizes (from 3 up to 1000 elements)<br/>
+Clean and leak-free C code<br/>
+Uses different strategies depending on stack size:<br/>
+- Hardcoded solutions for very small stacks
+- Custom sorting algorithm based on push cost calculation for larger stacks:
+    - For each element in stack A, the program calculates the lowest cost to push it to the correct position in stack B
+    - Then, it always pushes the element with the minimal push cost
 
 **Compile:**<br/>
 
