@@ -21,7 +21,7 @@ Uses different strategies depending on stack size:<br/>
 - Hardcoded solutions for very small stacks
 - Custom sorting algorithm based on push cost calculation for larger stacks:
     - For each element in stack A, the program calculates the lowest cost to push it to the correct position in stack B
-    - Then, it always pushes the element with the minimal push cost
+    - Then, it pushes the element with the minimal push cost
 
 **Compile:**<br/>
 
