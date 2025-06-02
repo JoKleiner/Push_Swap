@@ -15,8 +15,8 @@ SRCS_OP		= $(addprefix $(OPERATOR_DIR)/, swap.c push.c rotate.c re_rotate.c)
 
 SRCS 		= $(SRCS_PS) $(SRCS_OP)
 OBJS    	= $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
-TOTAL	= $(words $(SRCS))
-COUNT	= 0
+TOTAL		= $(words $(SRCS))
+COUNT		= 0
 
 
 all: $(NAME)
