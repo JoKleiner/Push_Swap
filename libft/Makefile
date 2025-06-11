@@ -43,7 +43,7 @@ $(OBJ_DIR)/%.o: %.c
 	@if [ $(COUNT) -eq 1 ]; then \
 		printf "\n"; \
 	fi
-	@printf "\033[1ACompilen ($(COUNT)/$(TOTAL)) $<\n";
+	@printf "\033[1A\033[2KCompilen ($(COUNT)/$(TOTAL)) $<\n";
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 
